@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mba_af_620_project_2"
+authors = [
+    {name = "Victor Arsenescu", email = "victor.arsenescu001@umb.edu"},
+]
+description = "Codebase for Project #2 MBA AF 620"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "yfinance>=0.2.26",
+    "pandas>=2.0.3",
+    "matplotlib>=3.7.2",
+    "openpyxl>=3.1.2",
+    "xlsxwriter>=3.1.2"
+]
+dynamic = ["version"]
+
+[project.scripts]
+plot = "milestone2:generate_plots"
+excel = "milestone2:export_to_excel"
+

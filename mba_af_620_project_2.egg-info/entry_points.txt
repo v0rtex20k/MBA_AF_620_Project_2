@@ -1,0 +1,3 @@
+[console_scripts]
+excel = milestone2:export_to_excel
+plot = milestone2:generate_plots
