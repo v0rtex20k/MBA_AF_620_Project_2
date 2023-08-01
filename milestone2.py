@@ -1,6 +1,6 @@
 import pandas as pd
 import yfinance as yf
-from datetime import date
+from datetime import date, timedelta
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
@@ -12,7 +12,7 @@ def get_closing_history(ticker_str, start)-> pd.DataFrame:
         DATA = yf.download(
                     tickers=ticker_str, 
                     start=start, 
-                    end=date.today(), 
+                    end=date.today() + timedelta(days=1), 
                     rounding=True, 
                     progress=False
                 )
